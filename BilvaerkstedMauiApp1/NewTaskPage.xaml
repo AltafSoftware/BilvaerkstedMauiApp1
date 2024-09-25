@@ -8,7 +8,7 @@
             <Label Text="Customer Name and Address" FontSize="20" FontFamily=""/>
             <Entry Placeholder="Enter customer name and address"/>
 
-            <Label Text="Car Make and Model" FontSize="20" FontFamily=""/>
+            <Label Text="Car Brand and Model" FontSize="20" FontFamily=""/>
             <Entry Placeholder="Enter car make and model"/>
 
             <Label Text="Registration Number" FontSize="20" FontFamily=""/>

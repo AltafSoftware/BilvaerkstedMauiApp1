@@ -7,7 +7,7 @@ namespace BilvaerkstedMauiApp1.Models
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
         public string CustomerName { get; set; } = string.Empty;
-        public string CusterAdress { get; set; } = string.Empty;
+        public string CustomerAdress { get; set; } = string.Empty;
         public string CarBrand { get; set; } = string.Empty;
         public string CarModel { get; set; } = string.Empty;
         public string RegistrationNumber { get; set; } = string.Empty;

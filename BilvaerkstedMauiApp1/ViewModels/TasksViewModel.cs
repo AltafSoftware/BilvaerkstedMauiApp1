@@ -1,8 +1,8 @@
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
+using BilvaerkstedMauiApp1.Models;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using BilvaerkstedMauiApp1.Models;
 
 namespace BilvaerkstedMauiApp1.ViewModels
 {
@@ -10,9 +10,7 @@ namespace BilvaerkstedMauiApp1.ViewModels
     {
         public ObservableCollection<TaskClass> Tasks { get; } = new();
 
-        public TasksViewModel()
-        {
-        }
+        public TasksViewModel() { }
 
         [RelayCommand]
         public async Task LoadTasksAsync()
@@ -22,6 +20,11 @@ namespace BilvaerkstedMauiApp1.ViewModels
             foreach (var task in Tasks)
             {
                 Tasks.Add(task);
+                System.Diagnostics.Debug.WriteLine(
+                    $"Task ID: {task.Id}, Customer: {task.CustomerName}, "
+                        + $"Address: {task.CustomerAdress}, Car: {task.CarBrand} {task.CarModel}, "
+                        + $"Registration: {task.RegistrationNumber}, DropOff: {task.DropOffDate}, Work: {task.WorkDescription}"
+                );
             }
         }
 
