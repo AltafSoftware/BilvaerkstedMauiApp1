@@ -8,7 +8,7 @@
     Title="BilvaerkstedMauiApp1">
 
     <ShellContent
-        Title="Home"
+        Title="dick"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 
