@@ -7,8 +7,21 @@
     Shell.FlyoutBehavior="Disabled"
     Title="BilvaerkstedMauiApp1">
 
+    <!-- Custom TitleView -->
+    <Shell.TitleView>
+        <Grid>
+            <Label 
+                Text="AU-AutoService"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                FontSize="30"  
+                FontAttributes="Bold"
+                Padding="10">
+            </Label>
+        </Grid>
+    </Shell.TitleView>
+
     <ShellContent
-        Title="dick"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 
