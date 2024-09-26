@@ -4,6 +4,24 @@
              x:Class="BilvaerkstedMauiApp1.BookedTasksPage"
              Title="Booked Tasks">
     <VerticalStackLayout>
+
+        <Button
+            Text="Load tasks"
+            Clicked="OnLoadTasksClicked"
+            WidthRequest="100"
+            HeightRequest="40">
+        </Button>
+
+        <ActivityIndicator 
+            x:Name="loadingIndicator"
+            IsRunning="{Binding IsLoading}"
+            IsVisible="{Binding IsLoading}"
+            Color="Blue"
+            WidthRequest="50"
+            HeightRequest="50"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"/>
+
         <DatePicker x:Name="datePicker" DateSelected="OnDateSelected" />
         <ListView x:Name="bookedTasksListView" ItemsSource="{Binding BookedTasks}">
             <ListView.ItemTemplate>
@@ -18,4 +36,5 @@
             </ListView.ItemTemplate>
         </ListView>
     </VerticalStackLayout>
+
 </ContentPage>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BilvaerkstedMauiApp1.Invoices.InvoicePage"
+             Title="Faktura">
+    <StackLayout Padding="10">
+        <Label Text="Mekanikerens Navn:" FontAttributes="Bold"/>
+        <Entry x:Name="mechanicNameEntry" Placeholder="Indtast mekanikerens navn"/>
+
+        <Label Text="Materialer Brugt:" FontAttributes="Bold"/>
+        <Entry x:Name="materialsUsedEntry" Placeholder="Indtast materialer brugt"/>
+
+        <Label Text="Pris på Materialer:" FontAttributes="Bold"/>
+        <Entry x:Name="materialsPriceEntry" Placeholder="Indtast pris på materialer" Keyboard="Numeric"/>
+
+        <Label Text="Antal Timer:" FontAttributes="Bold"/>
+        <Entry x:Name="hoursWorkedEntry" Placeholder="Indtast antal timer" Keyboard="Numeric"/>
+
+        <Label Text="Pris pr. Time:" FontAttributes="Bold"/>
+        <Entry x:Name="hourlyRateEntry" Placeholder="Indtast pris pr. time" Keyboard="Numeric"/>
+
+        <Button Text="Gem Faktura" Clicked="OnSaveInvoiceClicked"/>
+    </StackLayout>
+</ContentPage>

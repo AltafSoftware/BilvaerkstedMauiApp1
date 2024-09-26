@@ -54,6 +54,13 @@
                 Clicked="OnBookedTasksClicked"
                 HorizontalOptions="Center" />
 
+            <Label
+                Text="Tryk på nedenstående knap for at se alle fakturaer"
+                FontSize="16"
+                HorizontalOptions="Center" />
+
+            <Button Text="Vis faktura" Clicked="NavigateToInvoicePageClicked"/>
+
         </VerticalStackLayout>
     </ScrollView>
 

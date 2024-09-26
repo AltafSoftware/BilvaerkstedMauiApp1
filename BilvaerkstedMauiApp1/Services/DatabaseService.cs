@@ -1,4 +1,4 @@
-using System.IO;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using BilvaerkstedMauiApp1.Models;
 using SQLite;
@@ -13,6 +13,7 @@ namespace DatabaseService.Services
         {
             _database = new SQLiteAsyncConnection(dbPath);
             _database.CreateTableAsync<TaskClass>().Wait();
+            _database.CreateTableAsync<Invoice>().Wait();
         }
 
         // Metoder til CRUD-operationer
@@ -36,6 +37,17 @@ namespace DatabaseService.Services
         public Task<int> DeleteTaskAsync(TaskClass task)
         {
             return _database.DeleteAsync(task);
+        }
+
+        // Metoder til fakturaoperationer
+        public Task<int> SaveInvoiceAsync(Invoice invoice)
+        {
+            return _database.InsertAsync(invoice);
+        }
+
+        public Task<List<Invoice>> GetInvoicesAsync()
+        {
+            return _database.Table<Invoice>().ToListAsync();
         }
     }
 }

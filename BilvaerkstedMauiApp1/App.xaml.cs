@@ -1,27 +1,36 @@
-﻿using Microsoft.Maui.Controls;
-using DatabaseService.Services;
+﻿using DatabaseService.Services;
+using Microsoft.Maui.Controls;
 
 namespace BilvaerkstedMauiApp1
 {
     public partial class App : Application
     {
-        private static DatabaseServiceClass? _database;
-        
+        static DatabaseServiceClass database = null!;
+
         public static DatabaseServiceClass Database
         {
             get
             {
-                if (_database == null)
+                if (database == null)
                 {
-                    _database = new DatabaseServiceClass(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Tasks.db3"));
+                    database = new DatabaseServiceClass(
+                        Path.Combine(
+                            Environment.GetFolderPath(
+                                Environment.SpecialFolder.LocalApplicationData
+                            ),
+                            "Tasks.db3"
+                        )
+                    );
                 }
-                return _database;
+                return database;
             }
         }
+
         public App()
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new MainPage());
+
+            MainPage = new AppShell();
         }
     }
 }
