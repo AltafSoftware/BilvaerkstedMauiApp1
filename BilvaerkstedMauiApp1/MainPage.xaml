@@ -8,13 +8,13 @@
             Padding="30,0"
             Spacing="25">
             <Image
-                Source="lambo.jpg"
+                Source="aubil.jpg"
                 HeightRequest="350"
                 Aspect="AspectFit"
                 SemanticProperties.Description="dot net bot in a race car number eight" />
 
             <Label
-                Text="Velkommen til Pay 4 Luxury"
+                Text="Velkommen til AU-AutoService"
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" 
                 FontAttributes="Bold"/>
