@@ -1,6 +1,6 @@
 ﻿using System;
 using Microsoft.Maui.Controls;
-using BilvaerkstedMauiApp1.Invoices;
+using BilvaerkstedMauiApp1.Views;
 
 namespace BilvaerkstedMauiApp1
 {
@@ -9,24 +9,6 @@ namespace BilvaerkstedMauiApp1
         public MainPage()
         {
             InitializeComponent();
-        }
-
-        private async void OnNewTaskClicked(object sender, EventArgs e)
-        {
-            // Naviger til siden for at booke tid
-            await Navigation.PushAsync(new NewTaskPage());
-        }
-
-        private async void OnBookedTasksClicked(object sender, EventArgs e)
-        {
-            // Naviger til siden for at se bookede tider
-            await Navigation.PushAsync(new BookedTasksPage());
-        }
-
-        private async void NavigateToInvoicePageClicked(object sender, EventArgs e)
-        {
-            // Naviger til fakturasiden
-            await Navigation.PushAsync(new InvoicePage());
         }
     }
 }
