@@ -17,14 +17,9 @@ namespace BilvaerkstedMauiApp1.ViewModels
         {
             var tasks = await App.Database.GetTasksAsync();
             Tasks.Clear();
-            foreach (var task in Tasks)
+            foreach (var task in tasks)
             {
                 Tasks.Add(task);
-                System.Diagnostics.Debug.WriteLine(
-                    $"Task ID: {task.Id}, Customer: {task.CustomerName}, "
-                        + $"Address: {task.CustomerAdress}, Car: {task.CarBrand} {task.CarModel}, "
-                        + $"Registration: {task.RegistrationNumber}, DropOff: {task.DropOffDate}, Work: {task.WorkDescription}"
-                );
             }
         }
 

@@ -6,14 +6,18 @@ namespace BilvaerkstedMauiApp1;
 
 public partial class MainPage : ContentPage
 {
-	public MainPage()
-	{
-		InitializeComponent();
-	}
+    public MainPage()
+    {
+        InitializeComponent();
+    }
 
-	private async void OnBookNewTaskClicked(object sender, EventArgs e)
-	{
-		// Navigate to the NewTaskPage
-		await Navigation.PushAsync(new NewTaskPage());
-	}
+    private async void OnNewTaskClicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new NewTaskPage());
+    }
+
+    private async void OnBookedTasksClicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new BookedTasksPage());
+    }
 }

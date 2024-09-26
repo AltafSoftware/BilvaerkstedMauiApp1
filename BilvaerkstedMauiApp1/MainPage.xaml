@@ -1,33 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BilvaerkstedMauiApp1.MainPage">
+             x:Class="BilvaerkstedMauiApp1.MainPage"
+             Title="Task Manager">
 
     <ScrollView>
         <VerticalStackLayout
+            Spacing="25"
             Padding="30,0"
-            Spacing="25">
+            VerticalOptions="Center">
+
             <Image
-                Source="aubil.jpg"
-                HeightRequest="350"
-                Aspect="AspectFit"
-                SemanticProperties.Description="dot net bot in a race car number eight" />
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
 
             <Label
-                Text="Velkommen til AU-AutoService"
-                Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" 
-                FontAttributes="Bold"/>
+                Text="Welcome to Task Manager!"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
 
-            <Label
-                Text="Tryk på knappen nedenfor for at booke tid"
-                Style="{StaticResource SubHeadline}"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="" />
+            <Button
+                x:Name="NewTaskButton"
+                Text="New Task"
+                SemanticProperties.Hint="Navigate to New Task page"
+                Clicked="OnNewTaskClicked"
+                HorizontalOptions="Center" />
 
-            <Button 
-                Text="Book tid"
-                Clicked="OnBookNewTaskClicked"/>
+            <Button
+                x:Name="BookedTasksButton"
+                Text="Booked Tasks"
+                SemanticProperties.Hint="Navigate to Booked Tasks page"
+                Clicked="OnBookedTasksClicked"
+                HorizontalOptions="Center" />
 
         </VerticalStackLayout>
     </ScrollView>
