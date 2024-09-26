@@ -19,7 +19,6 @@
 
             <Image
                 Source="aubil.jpg"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
                 HeightRequest="200"
                 HorizontalOptions="Center" />
 
@@ -59,7 +58,10 @@
                 FontSize="16"
                 HorizontalOptions="Center" />
 
-            <Button Text="Vis faktura" Clicked="NavigateToInvoicePageClicked"/>
+            <Button 
+                Text="Vis faktura" 
+                Clicked="NavigateToInvoicePageClicked"
+                WidthRequest="100"/>
 
         </VerticalStackLayout>
     </ScrollView>
