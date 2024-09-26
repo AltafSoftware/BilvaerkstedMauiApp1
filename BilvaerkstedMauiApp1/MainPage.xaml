@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BilvaerkstedMauiApp1.MainPage"
-             Title="Task Manager">
+             x:Class="BilvaerkstedMauiApp1.MainPage">
 
     <ScrollView>
         <VerticalStackLayout
@@ -10,29 +9,48 @@
             Padding="30,0"
             VerticalOptions="Center">
 
+            <Label
+                Text="AU-AutoService"
+                FontSize="45"
+                FontAttributes="Bold"
+                TextColor="Black"
+                HorizontalOptions="Center"
+                VerticalOptions="Center" />
+
             <Image
-                Source="dotnet_bot.png"
+                Source="aubil.jpg"
                 SemanticProperties.Description="Cute dot net bot waving hi to you!"
                 HeightRequest="200"
                 HorizontalOptions="Center" />
 
             <Label
-                Text="Welcome to Task Manager!"
+                Text="Velkommen til AU-AutoService"
                 SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
+                FontSize="25"
+                FontAttributes="Bold"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Tryk på nedenstående knap for at booke tid"
+                FontSize="16"
                 HorizontalOptions="Center" />
 
             <Button
                 x:Name="NewTaskButton"
-                Text="New Task"
-                SemanticProperties.Hint="Navigate to New Task page"
+                Text="Book tid"
+                SemanticProperties.Hint="Naviger til book tid siden"
                 Clicked="OnNewTaskClicked"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Tryk på nedenstående knap for at se alle bookede tider"
+                FontSize="16"
                 HorizontalOptions="Center" />
 
             <Button
                 x:Name="BookedTasksButton"
-                Text="Booked Tasks"
-                SemanticProperties.Hint="Navigate to Booked Tasks page"
+                Text="Bookede tider"
+                SemanticProperties.Hint="Naviger til bookede tider siden"
                 Clicked="OnBookedTasksClicked"
                 HorizontalOptions="Center" />
 
