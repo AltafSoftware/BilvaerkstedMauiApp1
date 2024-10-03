@@ -6,7 +6,7 @@
     <VerticalStackLayout>
 
         <Button
-            Text="Load tasks"
+            Text="Load tider"
             Clicked="OnLoadTasksClicked"
             WidthRequest="100"
             HeightRequest="40">
